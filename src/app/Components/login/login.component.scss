@@ -1,0 +1,144 @@
+.Main-body{
+    display: flex;
+    flex-direction: row;
+}
+
+.MainContainer{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    width: 415px;
+    padding: 20px;
+    height: 63%;
+    background: #fff;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.form-logo{
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.header-text{
+    text-align: center;
+    line-height: 55px;
+    font-size: 25px;
+}
+
+
+.LoginContainer{
+    width: 100%; 
+}
+
+.form-label{
+    font-size: 15px; // example
+}
+
+.form-input{
+    font-size: 17px;
+}
+
+.form-field{
+    width: 90%;
+}
+
+.form-login{
+    padding-left: 10%;
+}
+.form-checkbox{
+    padding: 5px 0px 0px 4px;
+    margin-top: auto;
+    font-size: 13px;
+}
+
+.form-btn{
+    // box-sizing: border-box;
+    display: flex;
+    column-gap: 50%;
+    padding-top: 10%;
+    width: 350px;
+    // height: 0px;
+}
+
+// ::ng-deep {
+//     .mat-form-field-appearance-outline .mat-form-field-outline {
+//        color: darkgray;
+//        font-size: 25px;
+//     }
+//  }
+
+ mat-error{
+    font-size: 10px;
+ }
+
+ mat-hint{
+    font-size: 12px;
+ }
+
+ .footer{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 90%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    width: 95%;
+    column-gap: 7%;
+    // color: gray;
+}
+
+.footer-dropdown{
+    font-size: 13px;
+    margin-top: -5px;
+    color: black;
+    
+}
+
+.footer-link{
+    font-size: 13px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+.Login{
+    background-color: #4169e1;
+    color: #fff;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.Login a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.CreateAccont {
+    background-color: #fff;
+    color: #4169e1;
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 15px;
+}

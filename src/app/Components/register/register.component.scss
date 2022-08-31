@@ -1,4 +1,11 @@
 
+
+.Main-body{
+    display: flex;
+    flex-direction: row;
+}
+
+
 .MainContainer{
     display: flex;
     position: absolute;
@@ -45,9 +52,47 @@
     width: 100%;
 }
 
+.Email{
+    padding-bottom: 12px;
+}
+
+.form-checkbox{
+    padding: 17px 0px 0px 4px;
+    margin-top: auto;
+    font-size: 13px;
+}
+
 .form-btn{
     display: flex;
     column-gap: 48%;
     padding-top: 6%;
 }
 
+mat-error{
+    font-size: 10px;
+ }
+
+ mat-hint{
+    font-size: 12px;
+ }
+
+ .footer{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 88%;
+    left: 76%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    column-gap: 24%;
+    color: gray;
+}
+
+.footer-dropdown{
+    font-size: 12px;
+    
+}
+
+.footer-link{
+    font-size: 13px;
+}
