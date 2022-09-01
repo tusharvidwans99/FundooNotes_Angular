@@ -31,12 +31,12 @@
                 <div class="Password">
                     <mat-form-field class="form-field" appearance="outline">
                     <mat-label class="form-label">Password</mat-label>
-                    <input type="password" class="form-input" id="pass2" matInput placeholder="" formControlName="Password">
+                    <input [type]="hide ? 'password' : 'text'" class="form-input" id="pass2" matInput placeholder="" formControlName="Password">
                     <mat-error>Please provide valid Password</mat-error>
                   </mat-form-field>
                 </div>
             </div>  
-          <mat-checkbox class="form-checkbox">Show Password</mat-checkbox>
+          <mat-checkbox class="form-checkbox" (click)="ShowPassword()">Show Password</mat-checkbox>
           <div style="padding: 18px 0px 0px 0px;">
             <a mat-button color="primary" style="padding: 0px;">Forgot Password </a>
           </div>

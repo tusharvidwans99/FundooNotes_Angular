@@ -49,10 +49,11 @@ export class LoginComponent implements OnInit {
       }, (error: any) => {
         console.log(error);
       })
-
-      
-      
-
+ 
   }
 
+
+  ShowPassword() {
+    this.hide = !this.hide;
+  }
 }

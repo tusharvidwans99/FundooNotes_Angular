@@ -1,0 +1,79 @@
+.header{
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 1.5px lightgray;
+    
+}
+
+.form-logo{
+    font-size: 30px;
+    font-family: "Georgia", "Courier New", monospace;
+    align-self: center;
+    padding-right: 6%;
+}
+
+.header-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 46%;
+    column-gap: 12px;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4%;
+    column-gap: 22px;
+}
+
+.side-nav{
+    width: 25vh;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+.search{
+   width: 350%; 
+   font-size: 3px;
+   height: 47px;
+}
+
+.search-input{
+  width: 85%;
+  padding-left: 12px;  
+  font-size: 17px;
+  height: 40px;
+}
+
+button {
+    border: none;
+    background-color: none;
+}
+
+.header-icon {
+    padding-bottom: 5px;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: whitesmoke;
+    border-radius: 10px !important;
+  }
+
+.sidenav-icon{
+    padding-right: 15px;
+}
+
+.menu-items a:hover{
+    border-radius: 10px 40px 40px 10px;
+}
+
+.onActive{
+    background-color: #FEEFE2;
+}

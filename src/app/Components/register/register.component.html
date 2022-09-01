@@ -42,20 +42,20 @@
           <tr>
             <td><mat-form-field class="form-field" appearance="outline">
               <mat-label class="form-label">Password</mat-label>
-              <input type="password" class="form-input" id="pass1" matInput placeholder="" formControlName="Password"> 
+              <input [type]="hide ? 'password' : 'text'" class="form-input" id="pass1" matInput placeholder="" formControlName="Password"> 
               <mat-hint>Use 8 or more characters with mix of letters,numbers&symbols</mat-hint>
               <mat-error>Please create Password</mat-error>
             </mat-form-field>
             </td>
             <td><mat-form-field class="form-field" appearance="outline">
               <mat-label class="form-label">Confirm Password</mat-label>
-              <input type="password" class="form-input" id="pass2" class="form-input" matInput placeholder="" formControlName="ConfirmPassword" >
+              <input [type]="hide ? 'password' : 'text'" class="form-input" id="pass2" class="form-input" matInput placeholder="" formControlName="ConfirmPassword" >
               <mat-error>Please confirm your Password</mat-error>
             </mat-form-field>
             </td>
           </tr>
         </table>
-        <mat-checkbox class="form-checkbox">Show Password</mat-checkbox>
+        <mat-checkbox class="form-checkbox" (click)="ShowPassword()">Show Password</mat-checkbox>
         <section class="form-btn">  
           <div>
             <button mat-stroked-button color="primary" routerLink="/Login">Sign In Instead</button>

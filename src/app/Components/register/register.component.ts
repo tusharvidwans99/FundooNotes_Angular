@@ -53,7 +53,9 @@ export class RegisterComponent implements OnInit {
 
   }
 
-
+  ShowPassword() {
+    this.hide = !this.hide;
+  }
 
 
 }

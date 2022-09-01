@@ -7,10 +7,7 @@ import { HttpService } from '../httpservice/http.service';
 })
 export class UserService {
 
-  token:any;
-  constructor(private httpService: HttpService) { 
-    this.token=localStorage.getItem("token");
-  }
+  constructor(private httpService: HttpService) { }
 
 
   registration(data: any)
@@ -38,8 +35,9 @@ export class UserService {
 
     return this.httpService.PostService('https://localhost:44306/api/User/Login', data, false, header)
 
+   
   }
 
 
-
+    
 }
