@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../Services/userservice/user.service';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -13,9 +12,8 @@ export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
   hide: boolean = true;
-  durationInSeconds = 5;
 
-  constructor(private formBuilder: FormBuilder, private user: UserService,private _snackbar:MatSnackBar) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService) { }
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
@@ -48,11 +46,6 @@ export class RegisterComponent implements OnInit {
 
         this.user.registration(reqdata).subscribe((response:any)=>{
           console.log(response)
-          this._snackbar.open('Registration Sucessfull...','',{
-            duration: this.durationInSeconds * 800,
-            verticalPosition: 'top',
-            horizontalPosition: 'center',
-          });
         }, (error: any) => {
           console.log(error);
         })

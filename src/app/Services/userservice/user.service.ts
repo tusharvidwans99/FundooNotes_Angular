@@ -26,4 +26,20 @@ export class UserService {
     return this.httpService.PostService('https://localhost:44306/api/User/Register',data,false,header)
   }
 
+  login(data: any)
+  {
+    console.log(data);
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json'
+      })
+    }
+
+    return this.httpService.PostService('https://localhost:44306/api/User/Login', data, false, header)
+
+  }
+
+
+
 }

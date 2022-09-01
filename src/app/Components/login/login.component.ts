@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../Services/userservice/user.service';
 
 interface Language{
   value: string;
@@ -15,8 +16,9 @@ interface Language{
 export class LoginComponent implements OnInit {
   LoginForm!: FormGroup;
   submitted = false;
+  hide: boolean = true;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService) { }
 
   ngOnInit() {
       this.LoginForm = this.formBuilder.group({
@@ -35,6 +37,20 @@ export class LoginComponent implements OnInit {
           return;
       }
 
+      console.log(this.LoginForm.value);
+
+      let reqdata={
+        email: this.LoginForm.value.Email,
+        password: this.LoginForm.value.Password,
+      }
+
+      this.user.login(reqdata).subscribe((response:any)=>{
+        console.log(response)
+      }, (error: any) => {
+        console.log(error);
+      })
+
+      
       
 
   }
