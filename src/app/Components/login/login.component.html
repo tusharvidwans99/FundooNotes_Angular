@@ -19,19 +19,19 @@
           </div>
           
         </div>
-        <form class="form-login">
+        <form class="form-login" [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
             <div>
                 <div class="Email">
                     <mat-form-field class="form-field" appearance="outline">
                     <mat-label class="form-label">Username</mat-label>
-                    <input type="text" class="form-input" matInput placeholder="abc123@gmail.com"  />
+                    <input type="text" class="form-input" matInput placeholder="abc123@gmail.com" formControlName="Email" />
                     <mat-error>Please Provide Valid Email Address</mat-error>
                   </mat-form-field>
                 </div>
                 <div class="Password">
                     <mat-form-field class="form-field" appearance="outline">
                     <mat-label class="form-label">Password</mat-label>
-                    <input type="password" class="form-input" id="pass2" matInput placeholder="">
+                    <input type="password" class="form-input" id="pass2" matInput placeholder="" formControlName="Password">
                     <mat-error>Please provide valid Password</mat-error>
                   </mat-form-field>
                 </div>
@@ -42,10 +42,10 @@
           </div>
           <section class="form-btn">  
             <div class="CreateAccont">
-              <a mat-stroked-button color="primary" routerLink="/Register">Create Account</a>
+              <button mat-stroked-button color="primary" routerLink="/Register">Create Account</button>
             </div>
             <div class="Login">
-              <a mat-raised-button color="primary">Login</a>
+              <button mat-raised-button color="primary">Login</button>
             </div>
           </section>
         </form>
@@ -54,7 +54,7 @@
     </div>
       <div class="footer">
               <div class="footer-dropdown">
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="legacy">
                   <mat-label>select Language</mat-label>
                   <mat-select>
                     <mat-option>None</mat-option>
