@@ -18,13 +18,17 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatCardModule} from '@angular/material/card';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
+import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    DisplayNoteComponent,
+    GetAllNotesComponent
   ],
   imports: [
     BrowserModule,

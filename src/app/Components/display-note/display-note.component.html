@@ -1,0 +1,12 @@
+<div class="display-note row">
+    <div *ngFor="let note of NoteList" class="column">
+        <mat-card class="note-card ">
+            <mat-card-title class="note-title" style="font-size:20px;" >
+                {{note.title}}
+            </mat-card-title>
+            <mat-card-content class="note-description" style="font-size: 15px; margin-top:15px">
+                <p>{{note.description}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

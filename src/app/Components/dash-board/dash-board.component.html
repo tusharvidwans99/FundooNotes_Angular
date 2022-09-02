@@ -1,7 +1,7 @@
 <body>
     <div>
         <mat-toolbar class="header">
-         <button mat-icon-button class="header-menu">
+         <button mat-icon-button class="header-menu" matTooltip="Main menu">
           <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
         </button>
         &nbsp;&nbsp;
@@ -11,31 +11,31 @@
         </div>
         <div class="form-search">
             <mat-form-field class="search"  appearance="fill">
-                <button style="background-color: none;" mat-icon-button class="header-icon" >
+                <button style="background-color: none;" mat-icon-button class="header-icon" matTooltip="Search">
                     <img style="width: 22px;" src="../../../assets/Dashboard/search.png"/>
                 </button>
                 <input  class="search-input" matInput placeholder="Search" autocomplete="off"/>
-                <button mat-icon-button class="header-icon" >
+                <button mat-icon-button class="header-icon" matTooltip="Clear">
                     <img style="width: 22px;" src="../../../assets/Dashboard/close.png"/>
                 </button>
             </mat-form-field>
         </div>
         <div class="header-btn">
-            <button mat-icon-button class="header-icon" >
+            <button mat-icon-button class="header-icon" matTooltip="Refresh">
                 <img style="width: 27px;" src="../../../assets/Dashboard/refresh.png"/>
             </button>
-            <button mat-icon-button class="header-icon">
+            <button mat-icon-button class="header-icon" matTooltip="List view">
                 <img style="width: 27px;" src="../../../assets/Dashboard/List.png"/>
              </button>
-            <button mat-icon-button class="header-icon" >
+            <button mat-icon-button class="header-icon" matTooltip="Settings">
                 <img style="width: 27px;" src="../../../assets/Dashboard/settings.png"/>
             </button>
         </div>
         <div class="profile">
-            <button mat-icon-button class="header-icon" >
+            <button mat-icon-button class="header-icon" matTooltip="Apps">
                 <img style="width: 27px;" src="../../../assets/Dashboard/apps.png"/>
             </button>
-            <button mat-icon-button class="profile-icon" >
+            <button mat-icon-button class="profile-icon" matTooltip="Fundoo Account">
                 <img style="width: 27px;" src="../../../assets/Dashboard/person.png"/>
             </button>
         </div>
@@ -52,6 +52,7 @@
         </mat-sidenav>
         <mat-sidenav-content>
             <div style="height:91.8vh; background-color: white;">
+                <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>
       </mat-sidenav-container>

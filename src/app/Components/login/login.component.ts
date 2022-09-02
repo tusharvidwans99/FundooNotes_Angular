@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../Services/userservice/user.service';
+import { Router } from '@angular/router';
+
 
 interface Language{
   value: string;
@@ -18,7 +20,7 @@ export class LoginComponent implements OnInit {
   submitted = false;
   hide: boolean = true;
 
-  constructor(private formBuilder: FormBuilder, private user: UserService) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService, private router: Router) { }
 
   ngOnInit() {
       this.LoginForm = this.formBuilder.group({
@@ -46,6 +48,8 @@ export class LoginComponent implements OnInit {
 
       this.user.login(reqdata).subscribe((response:any)=>{
         console.log(response)
+        localStorage.setItem("token", response.data);
+        this.router.navigateByUrl('/DashBoard')
       }, (error: any) => {
         console.log(error);
       })
