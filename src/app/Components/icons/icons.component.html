@@ -1,0 +1,38 @@
+<div class="create-note-footer">
+    <div class="create-note-btn">
+            <button mat-icon-button matTooltip="Reminde me">
+                    <img class="icon" src="../../../assets/Dashboard/notification.png" />
+            </button>
+            <button mat-icon-button matTooltip="Collaborator" class="header-icon">
+                    <img src="../../../assets/Dashboard/add_person.png" />
+            </button>
+            <button mat-icon-button matTooltip="Background options" class="bg-color">
+                    <img src="../../../assets/Dashboard/color.png" [matMenuTriggerFor]="color"/>
+                    <mat-menu #color="matMenu">
+                        <button mat-menu-item>Red</button>
+                        <button mat-menu-item>Yellow</button>
+                        <button mat-menu-item>Blue</button>
+                        <button mat-menu-item>Green</button>
+                        <button mat-menu-item>White</button>
+                        <button mat-menu-item>Gray</button>
+                      </mat-menu>
+            </button>
+            <button mat-icon-button matTooltip="Add image">
+                    <img src="../../../assets/Dashboard/add_image.png" />
+            </button>
+            <button mat-icon-button matTooltip="Archive">
+                    <img src="../../../assets/Dashboard/archive.png" />
+            </button>
+            <button mat-icon-button matTooltip="More">
+                <img src="../../../assets/Dashboard/more.png" [matMenuTriggerFor]="more"/>
+              <mat-menu #more="matMenu">
+                <button mat-menu-item>Delete Note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+                <button mat-menu-item>Copy to Google Docs</button>
+              </mat-menu>
+            </button>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="note">
+    <form [formGroup]="createNoteForm">
+
+            <div class="create-note-header" *ngIf="notecard">
+                    <input class="create-note" id="btn1" type="text" placeholder="Title" formControlName="title" autocomplete="off" />
+                    <button mat-icon-button class="profile-icon" matTooltip="Pin">
+                            <img src="../../../assets/Dashboard/pin.png" />
+                    </button>
+            </div>
+            <div class="create-note-body">
+                    <textarea class="create-note" id="btn2" type="text" (click)="openNoteCard()" formControlName="description"
+                            placeholder="Take a note..." autocomplete="off" ></textarea>
+            </div>
+            <div class="create-note-footer" *ngIf="notecard">
+                    <div class="create-note-btn">
+                            <button mat-icon-button matTooltip="Reminde me">
+                                    <img src="../../../assets/Dashboard/notification.png" />
+                            </button>
+                            <button mat-icon-button matTooltip="Collaborator" class="header-icon">
+                                    <img src="../../../assets/Dashboard/person.png" />
+                            </button>
+                            <button mat-icon-button matTooltip="Background options" class="bg-color" [matMenuTriggerFor]="vertebrates">
+                                    <img src="../../../assets/Dashboard/color.png" />
+                            </button>
+                            <button mat-icon-button matTooltip="Add image">
+                                    <img src="../../../assets/Dashboard/add_image.png" />
+                            </button>
+                            <button mat-icon-button matTooltip="Archive">
+                                    <img src="../../../assets/Dashboard/archive.png" />
+                            </button>
+                            <button mat-icon-button matTooltip="More">
+                                    <img src="../../../assets/Dashboard/more.png" />
+                            </button>
+                            <button mat-icon-button matTooltip="Undo">
+                                    <img src="../../../assets/Dashboard/undo.png" />
+                            </button>
+                            <button mat-icon-button matTooltip="Redo">
+                                    <img src="../../../assets/Dashboard/redo.png" />
+                            </button>
+                    </div>
+                            <button mat-button matTooltip="Close" (click)="onSubmit()"  class="close-card">Close</button>
+                    </div>
+                    <mat-menu #vertebrates="matMenu" onselect="onColorseclect()">
+                        <button mat-menu-item >red</button>
+                        <button mat-menu-item >yellow</button>
+                        <button mat-menu-item >green</button>
+                        <button mat-menu-item>blue</button>
+                        <button mat-menu-item>white</button>
+                </mat-menu>
+            
+    </form>
+
+</div>

@@ -20,6 +20,13 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatCardModule} from '@angular/material/card';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { IconsComponent } from './Components/icons/icons.component';
+import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
+import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +35,11 @@ import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.c
     LoginComponent,
     DashBoardComponent,
     DisplayNoteComponent,
-    GetAllNotesComponent
+    GetAllNotesComponent,
+    CreateNoteComponent,
+    IconsComponent,
+    ArchiveNotesComponent,
+    TrashNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +55,8 @@ import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.c
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

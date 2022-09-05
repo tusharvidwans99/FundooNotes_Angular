@@ -123,14 +123,19 @@
     text-align: center;
     border-radius: 3px;
     font-size: 15px;
+    cursor: pointer;
 }
 
-.Login a{
+.Login > button{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 4px;
+    margin-left: 4px;
     font-size: 16px;
+    background-color: #4169e1;
+    color: #fff;
+    border: none;
 }
 
 .CreateAccont {
@@ -141,4 +146,10 @@
     text-align: center;
     border-radius: 3px;
     font-size: 15px;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+
 }

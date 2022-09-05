@@ -28,4 +28,41 @@ export class NoteService {
   }
 
 
+  createNote(reqdata: any)
+  {
+    console.log(reqdata);
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
+      })
+    }
+    return this.httpService.PostService('https://localhost:44306/api/Notes/Create',reqdata,true,header)
+  }
+
+
+  getArchiveNotes() {
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+    return this.httpService.GetService('https://localhost:44306/api/Notes/Read', true, header);
+  }
+
+
+  getTrashNotes(){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+    return this.httpService.GetService('https://localhost:44306/api/Notes/Read', true, header);
+  }
+
+
 }

@@ -1,61 +1,92 @@
-<body>
-    <div>
-        <mat-toolbar class="header">
-         <button mat-icon-button class="header-menu" matTooltip="Main menu">
-          <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+<div class="container">
+    <mat-toolbar class="navbar">
+        <button mat-icon-button class="example-icon" (click)="sidenav.toggle();">
+            <img src="../../../assets/Dashboard/menu.svg" alt="menu icon" width="25px">
         </button>
-        &nbsp;&nbsp;
-        <img style="width: 25px;" src="../../../assets/Dashboard/NoteLogo2.jpg"/>&nbsp;&nbsp;
-        <div class="form-logo">
-            <span>FundoNote</span>
+        <span class="logoimage">
+            <span routerLink="/dashboard/notes" class="logoimg">
+                <img src="../../../assets/Dashboard/NoteLogo2.jpg" alt="logo" width="38px">
+            </span>
+        </span>
+        <span routerLink="/dashboard/notes" class="company">FUNDOO</span>
+
+        <div>
+            <form>
+                <div class="searchbody">
+                    <button mat-icon-button class="example-icon">
+                        <img src="../../../assets/Dashboard/search.png" alt="search icon" width="25px">
+                    </button>
+                   
+                        <input class="inputtxt" autocomplete="off" placeholder="Search" type="text" id="name">
+                    <span>
+                    <button mat-icon-button class="example-icon">
+                        <img class="cancle-bttn" src="../../../assets/Dashboard/close.png"alt="cancle icon" width="20px">
+                    </button> 
+                    </span>
+                </div>
+            </form>
+
         </div>
-        <div class="form-search">
-            <mat-form-field class="search"  appearance="fill">
-                <button style="background-color: none;" mat-icon-button class="header-icon" matTooltip="Search">
-                    <img style="width: 22px;" src="../../../assets/Dashboard/search.png"/>
+
+        <div class="lastitems">
+            <div>
+                <button mat-icon-button class="example-icon">
+                    <img src="../../../assets/Dashboard/refresh.png" alt="menu icon" width="25px">
                 </button>
-                <input  class="search-input" matInput placeholder="Search" autocomplete="off"/>
-                <button mat-icon-button class="header-icon" matTooltip="Clear">
-                    <img style="width: 22px;" src="../../../assets/Dashboard/close.png"/>
+            </div>
+            <div>
+                <button mat-icon-button class="example-icon">
+                    <img src="../../../assets/Dashboard/view.svg" alt="menu icon" width="25px">
                 </button>
-            </mat-form-field>
+            </div>
+            <div>
+                <button mat-icon-button class="example-icon">
+                    <img src="../../../assets/Dashboard/settings.png" alt="menu icon" width="25px">
+                </button>
+            </div>
         </div>
-        <div class="header-btn">
-            <button mat-icon-button class="header-icon" matTooltip="Refresh">
-                <img style="width: 27px;" src="../../../assets/Dashboard/refresh.png"/>
-            </button>
-            <button mat-icon-button class="header-icon" matTooltip="List view">
-                <img style="width: 27px;" src="../../../assets/Dashboard/List.png"/>
-             </button>
-            <button mat-icon-button class="header-icon" matTooltip="Settings">
-                <img style="width: 27px;" src="../../../assets/Dashboard/settings.png"/>
-            </button>
+
+        <div class="account">
+            <div>
+                <button mat-icon-button class="example-icon">
+                    <img src="../../../assets/Dashboard/apps.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+            <div>
+                <button mat-icon-button class="example-icon">
+                    <img src="../../../assets/Dashboard/account.svg" alt="menu icon" width="25px">
+                </button>
+            </div>
+
         </div>
-        <div class="profile">
-            <button mat-icon-button class="header-icon" matTooltip="Apps">
-                <img style="width: 27px;" src="../../../assets/Dashboard/apps.png"/>
-            </button>
-            <button mat-icon-button class="profile-icon" matTooltip="Fundoo Account">
-                <img style="width: 27px;" src="../../../assets/Dashboard/person.png"/>
-            </button>
-        </div>
-      </mat-toolbar>
-      <mat-sidenav-container>
-        <mat-sidenav class="side-nav" #sidenav mode="side">
-             <mat-nav-list class="menu-items">
-                <a mat-list-item style="border-radius: 10px 40px 40px 10px;" (click)="goTo('Notes')" [ngClass]="{'onActive':selectedMenu == 'Notes'}"><img class="sidenav-icon" src="../../../assets/Dashboard/lightbulb.png">Notes</a>
-                <a mat-list-item style="border-radius: 10px 40px 40px 10px;" (click)="goTo('Reminders')" [ngClass]="{'onActive':selectedMenu == 'Reminders'}"><img class="sidenav-icon" src="../../../assets/Dashboard/notification.png">Reminders</a>
-                <a mat-list-item style="border-radius: 10px 40px 40px 10px;" (click)="goTo('Edit Labels')" [ngClass]="{'onActive':selectedMenu == 'Edit Labels'}"><img class="sidenav-icon" src="../../../assets/Dashboard/edit.png">Edit Labels</a>
-                <a mat-list-item style="border-radius: 10px 40px 40px 10px;" (click)="goTo('Archive')" [ngClass]="{'onActive':selectedMenu == 'Archive'}"><img class="sidenav-icon" src="../../../assets/Dashboard/archive.png">Archive</a>
-                <a mat-list-item style="border-radius: 10px 40px 40px 10px; " (click)="goTo('Trash')" [ngClass]="{'onActive':selectedMenu == 'Trash'}"><img class="sidenav-icon" src="../../../assets/Dashboard/Trash.png" style="width:14%">Trash</a>
-             </mat-nav-list>
+    </mat-toolbar>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side" style="width:16% ;">
+            <mat-nav-list class="selcetIcon">
+                <ul class="menu-items product">
+                    <li (click)="goTo('Notes')" (click)="notes()" [ngClass]="{'onActive':selectedMenu == 'Notes'}"><img class="sideicon"
+                            src="../../../assets/Dashboard/lightbulb.png" alt="note icon" width="18px"><span
+                            class="text-data">Notes</span></li>
+                    <li (click)="goTo('Remainders')" [ngClass]="{'onActive':selectedMenu == 'Remainders'}"><img
+                            class="sideicon" src="../../../assets/Dashboard/notification.png" alt="reminder icon" width="20px"><span
+                            class="text-data">Remainders</span></li>
+                    <li (click)="goTo('Edit')" [ngClass]="{'onActive':selectedMenu == 'Edit'}"><img class="sideicon"
+                            src="../../../assets/Dashboard/edit.png" alt="edit icon" width="20px"><span
+                            class="text-data">Edit</span></li>
+                    <li (click)="goTo('Archive')" (click)="archive()" [ngClass]="{'onActive':selectedMenu == 'Archive'}"><img
+                            class="sideicon" src="../../../assets/Dashboard/archive.png" alt="archive icon" width="20px"><span
+                            class="text-data">Archive</span></li>
+                    <li (click)="goTo('Trash')" (click)="trash()" [ngClass]="{'onActive':selectedMenu == 'Trash'}"><img class="sideicon"
+                            src="../../../assets/Dashboard/Trash.png" alt="trash icon" width="20px"><span
+                            class="text-data">Trash</span></li>
+                </ul>
+            </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-            <div style="height:91.8vh; background-color: white;">
+            <div style="height: 90vh;">
                 <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>
-      </mat-sidenav-container>
-    </div>
-    
-</body>
+    </mat-sidenav-container>
+
+</div>
