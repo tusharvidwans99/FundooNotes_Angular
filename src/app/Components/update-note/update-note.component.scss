@@ -1,0 +1,14 @@
+.dialog-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+mat-card-title{
+    height: 30px;
+}
+
+mat-card-content{
+    min-height: 50px;
+    font-size: 17px;
+}

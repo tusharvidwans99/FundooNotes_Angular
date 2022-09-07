@@ -1,23 +1,19 @@
-<div class="displayNote">
-    <div *ngFor="let note of NoteList">
-        <mat-card class="example-card">
-            <mat-card-title mat-dialog-title>
-                {{note.title }}
-                <!-- NoteID: {{note.noteID}} -->
+<div class="display-note row">
+    <div *ngFor="let note of NoteList" class="column">
+        <mat-card class="note-card " mat-dialog-container>
+            <mat-card-title class="note-title" (click)="openDialog(note)">
+                {{note.title}}
             </mat-card-title>
-
-            <mat-card-content mat-dialog-content>
-                {{ note.description }}
-                <!-- Trash: {{note.trash}} -->
-
+            <mat-card-content class="note-description" (click)="openDialog(note)">
+                <p>{{note.description}}</p>
             </mat-card-content>
 
           
-        <mat-card-actions>
-            <div class="icons">
-                <app-icons></app-icons>
-            </div>
-        </mat-card-actions>
+            <mat-card-actions>
+                <div class="icons">
+                    <app-icons [noteObj]="note"></app-icons>
+                </div>
+            </mat-card-actions>
         </mat-card>
     </div>
 </div>

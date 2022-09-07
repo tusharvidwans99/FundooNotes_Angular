@@ -32,4 +32,9 @@ export class GetAllNotesComponent implements OnInit {
     })
   }
 
+  receiveMessage(event:any) {
+    console.log(event);
+    this.getallNotes();
+  }
+
 }

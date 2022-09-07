@@ -9,7 +9,6 @@ import {  Router } from '@angular/router';
 export class DashBoardComponent implements OnInit {
 
   selectedMenu:any='dashboard';
-  isArchive: boolean=false;
   @Input() NoteList:any;
 
 

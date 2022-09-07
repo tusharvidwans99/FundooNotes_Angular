@@ -22,6 +22,14 @@
 input{
     border: 0px;
 }
+
+.example-icon{
+    border: none;
+    position: relative;
+    top: 7px;
+    cursor: pointer;
+}
+
 .searchbody{
     background-color:rgb(241, 243, 244);
     border-radius: 6px;
@@ -37,20 +45,20 @@ input{
     
 }
 .searchbody:active{
-    background-color: white;
+    // background-color: white;
 }
 .inputtxt:active{
-    background-color: white;
+    // background-color: white;
 }
 
 .searchbody:hover{
-    background-color: white;
+    // background-color: white;
     border-width: thin;
     border:1px solid rgb(241, 243, 244);
     
 }
 .inputtxt:hover{
-    background-color: white;
+    // background-color: white;
 }
 
 .lastitems{

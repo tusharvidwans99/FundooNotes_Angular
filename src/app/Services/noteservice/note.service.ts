@@ -42,27 +42,40 @@ export class NoteService {
   }
 
 
-  getArchiveNotes() {
+  ArchiveNotes(NoteID:any) {
+console.log(this.token);
 
+let header = {
+  headers:new HttpHeaders({
+    'Content-type':'application/json',
+    'Authorization':"Bearer "+this.token
+  })
+}
+    return this.httpService.PutService(`https://localhost:44306/api/Notes/Archive/${NoteID}`,{}, true, header);
+  }
+
+
+  TrashNotes(NoteID:any){
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': "Bearer " + this.token
       })
     }
-    return this.httpService.GetService('https://localhost:44306/api/Notes/Read', true, header);
+    return this.httpService.PutService(`https://localhost:44306/api/Notes/Archive/${NoteID}`,{}, true, header);
   }
 
 
-  getTrashNotes(){
+  updateNote(updatedata:any, NoteID:any)
+  {
     let header = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': "Bearer " + this.token
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
       })
     }
-    return this.httpService.GetService('https://localhost:44306/api/Notes/Read', true, header);
-  }
 
+    return this.httpService.PutService(`https://localhost:44306/api/Notes/Update/${NoteID}`,updatedata,true,header);
+  }
 
 }

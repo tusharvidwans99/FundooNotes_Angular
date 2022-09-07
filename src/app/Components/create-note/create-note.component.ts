@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteService } from '../../Services/noteservice/note.service';
 // import {GetNotes} from '../get-all-notes/get-all-notes.component'
@@ -15,6 +15,8 @@ export class CreateNoteComponent implements OnInit {
   notecard: boolean=false;
   color!:string;
 
+  @Output() messageEvent = new EventEmitter<string>();
+
   constructor(private formBuilder: FormBuilder, private note: NoteService) { }
 
   
@@ -26,7 +28,8 @@ export class CreateNoteComponent implements OnInit {
   });
   }
 
-  get f() { return this.createNoteForm.controls; }
+  
+
  
 
   onSubmit() {
@@ -44,9 +47,10 @@ export class CreateNoteComponent implements OnInit {
       color: this.createNoteForm.value.color,
     }
 
+  
     this.note.createNote(reqdata).subscribe((response:any)=>{
       console.log(response)
-      this.note.getallNote();
+      this.messageEvent.emit('hi')
     }, (error: any) => {
       console.log(error);
     })

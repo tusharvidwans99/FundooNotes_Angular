@@ -1,0 +1,10 @@
+    <mat-card-title>
+        <input matInput class="note-title"[(ngModel)]="title">
+    </mat-card-title>
+    <mat-card-content>
+        <input matInput class="note-description"[(ngModel)]="description">
+    </mat-card-content>
+    <mat-card-footer>
+        <app-icons></app-icons>
+        <button mat-button matTooltip="Close" mat-dialog-close class="close-card" (click)="onSubmit()">Close</button>
+    </mat-card-footer>

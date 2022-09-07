@@ -20,15 +20,15 @@ export class ArchiveNotesComponent implements OnInit {
   }
 
   getAllArchiveNotes(){
-    this.note.getArchiveNotes().subscribe((request:any) =>{
-      console.log("request data ",request);
+    this.note.getallNote().subscribe((request:any) =>{
+      console.log("request data ",request.data);
       this.archiveNotes = request.data;
       this.archiveNotes=this.archiveNotes.filter((obj:any)=>{
-        return obj.archive == true && obj.trash == false;
+        return obj.archive == true;
       })
       console.log(this.archiveNotes);
-       this.archiveNotes.reverse();
       console.log(this.archiveNotes.reverse());
+      // this.archiveNotes
       return this.archiveNotes;
     })
   }

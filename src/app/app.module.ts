@@ -25,6 +25,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { IconsComponent } from './Components/icons/icons.component';
 import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
 import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
+import { UpdateNoteComponent } from './Components/update-note/update-note.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -39,7 +42,8 @@ import { TrashNotesComponent } from './Components/trash-notes/trash-notes.compon
     CreateNoteComponent,
     IconsComponent,
     ArchiveNotesComponent,
-    TrashNotesComponent
+    TrashNotesComponent,
+    UpdateNoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,9 @@ import { TrashNotesComponent } from './Components/trash-notes/trash-notes.compon
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

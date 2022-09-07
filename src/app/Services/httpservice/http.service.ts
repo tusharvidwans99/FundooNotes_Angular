@@ -21,4 +21,9 @@ export class HttpService {
     }
   
   
+    PutService(url:string, data:any, token: boolean=false, options:any){
+
+      return this.httpClient.put(url, data, token && options )
+    }
+
 }

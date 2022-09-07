@@ -1,49 +1,33 @@
-.example-card{
-    width: auto;
-    height: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-  
-    border: solid gray 1px;
-    border-radius: 8px;
-    box-shadow: 1px 1px 1px gray;
-  }
-  
-  .displayNote {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: fit-content;
-    margin-top: 100px;
-    margin-left: 150px;
-  }
-  
-  .description{
-      
-      font-size: 15px;
-      letter-spacing: 0;
-      line-height: 1.5rem;
-      font-weight:lighter;
-  }
+.display-note{
+  display: flex;
+  flex-flow: wrap;
+  position: absolute;
+  left: 10%;
+  width: 85%;
+  column-gap: 15px;
+  margin-top: 80px;
 
-  .create-note-footer{
-    display: flex;
-    flex-direction: row;
-    position: relative;
 }
 
-.icons{
-    visibility: hidden;
+.note-card {
+   overflow-wrap: break-word;
+   width: 200px;
+   height: auto;
+   min-height: 80px;
+   margin-top: 20px;
+   padding: 12px;
 }
 
-.example-card:hover .icons{
-    visibility: visible;
+.note-title{
+  overflow-wrap: break-word;
+  margin-top: 20px;
+  font-size: 20px;
 }
 
-
-// .create-note-btn{
-//     margin-left: 4px;
-//     width: 100%;
-// }
+.note-description{
+  overflow-wrap: break-word;
+  font-size: 15px;
+  padding-top: 10px;
+  min-height: 35px;
+  margin-bottom: 0px;
+}

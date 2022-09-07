@@ -20,13 +20,13 @@
             <button mat-icon-button matTooltip="Add image">
                     <img src="../../../assets/Dashboard/add_image.png" />
             </button>
-            <button mat-icon-button matTooltip="Archive">
+            <button mat-icon-button matTooltip="Archive" (click)="Archive()">  
                     <img src="../../../assets/Dashboard/archive.png" />
             </button>
             <button mat-icon-button matTooltip="More">
                 <img src="../../../assets/Dashboard/more.png" [matMenuTriggerFor]="more"/>
               <mat-menu #more="matMenu">
-                <button mat-menu-item>Delete Note</button>
+                <button mat-menu-item (click)="Trash()">Delete Note</button>
                 <button mat-menu-item>Add label</button>
                 <button mat-menu-item>Add drawing</button>
                 <button mat-menu-item>Make a copy</button>
@@ -35,4 +35,5 @@
               </mat-menu>
             </button>
     </div>
+    <!-- <button mat-button matTooltip="Close" mat-dialog-close class="close-card">Close</button> -->
 </div>
