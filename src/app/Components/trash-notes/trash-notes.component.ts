@@ -22,7 +22,7 @@ export class TrashNotesComponent implements OnInit {
       console.log("request data ",request);
       this.trashNotes = request.data;
       this.trashNotes = this.trashNotes.filter((obj:any)=>{
-        return obj.trash == true;
+        return obj.trash == true && obj.archive == false;
       })
       console.log(this.trashNotes);
        this.trashNotes.reverse();

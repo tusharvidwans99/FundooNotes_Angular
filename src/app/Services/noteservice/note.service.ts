@@ -62,7 +62,7 @@ let header = {
         'Authorization': "Bearer " + this.token
       })
     }
-    return this.httpService.PutService(`https://localhost:44306/api/Notes/Archive/${NoteID}`,{}, true, header);
+    return this.httpService.PutService(`https://localhost:44306/api/Notes/Trash/${NoteID}`,{}, true, header);
   }
 
 
@@ -76,6 +76,22 @@ let header = {
     }
 
     return this.httpService.PutService(`https://localhost:44306/api/Notes/Update/${NoteID}`,updatedata,true,header);
+  }
+
+
+  DeleteNote(NoteID:any){
+    
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
+      })
+    }
+
+    return this.httpService.DelteService(`https://localhost:44306/api/Notes/Delete/${NoteID}`,true,header);
+
+    
+
   }
 
 }

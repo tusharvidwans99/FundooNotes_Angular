@@ -1,5 +1,5 @@
 <div class="create-note-footer">
-    <div class="create-note-btn">
+    <div class="create-note-btn" *ngIf="!isTrashComponent">
             <button mat-icon-button matTooltip="Reminde me">
                     <img class="icon" src="../../../assets/Dashboard/notification.png" />
             </button>
@@ -20,9 +20,14 @@
             <button mat-icon-button matTooltip="Add image">
                     <img src="../../../assets/Dashboard/add_image.png" />
             </button>
-            <button mat-icon-button matTooltip="Archive" (click)="Archive()">  
-                    <img src="../../../assets/Dashboard/archive.png" />
-            </button>
+            
+                <button class="archive" mat-icon-button matTooltip="Archive" (click)="Archive()" *ngIf="isDisplaynoteComponent"> 
+                        <img src="../../../assets/Dashboard/archive.png" ></button>
+            
+            
+                <button mat-icon-button matTooltip="Unarchive" (click)="Unarchive();" *ngIf="isArchiveComponent">
+                    <img src="../../../assets/Dashboard/unarchive.svg" ></button>
+            
             <button mat-icon-button matTooltip="More">
                 <img src="../../../assets/Dashboard/more.png" [matMenuTriggerFor]="more"/>
               <mat-menu #more="matMenu">
@@ -36,4 +41,10 @@
             </button>
     </div>
     <!-- <button mat-button matTooltip="Close" mat-dialog-close class="close-card">Close</button> -->
+    <div *ngIf="isTrashComponent">
+        <button mat-icon-button matTooltip="Delete Forever" (click)="delete()"> 
+                <img src="../../../assets/Dashboard/deleteforever.svg" width="20px" height="20px"></button>
+        <button mat-icon-button matTooltip="Restore" (click)="Trash()"> 
+                <img src="../../../assets/Dashboard/Restore.svg" width="20px" height="20px"></button>
+    </div>
 </div>

@@ -3,9 +3,11 @@
         <mat-card class="note-card " mat-dialog-container>
             <mat-card-title class="note-title" (click)="openDialog(note)">
                 {{note.title}}
+                Trash:{{note.trash}}
             </mat-card-title>
             <mat-card-content class="note-description" (click)="openDialog(note)">
                 <p>{{note.description}}</p>
+                <p>Archive:{{note.archive}}</p>
             </mat-card-content>
 
           

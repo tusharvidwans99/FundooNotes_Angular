@@ -24,7 +24,7 @@ export class ArchiveNotesComponent implements OnInit {
       console.log("request data ",request.data);
       this.archiveNotes = request.data;
       this.archiveNotes=this.archiveNotes.filter((obj:any)=>{
-        return obj.archive == true;
+        return obj.archive == true && obj.trash == false;
       })
       console.log(this.archiveNotes);
       console.log(this.archiveNotes.reverse());
