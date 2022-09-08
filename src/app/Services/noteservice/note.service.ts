@@ -43,15 +43,15 @@ export class NoteService {
 
 
   ArchiveNotes(NoteID:any) {
-console.log(this.token);
+    console.log(this.token);
 
-let header = {
-  headers:new HttpHeaders({
-    'Content-type':'application/json',
-    'Authorization':"Bearer "+this.token
-  })
-}
-    return this.httpService.PutService(`https://localhost:44306/api/Notes/Archive/${NoteID}`,{}, true, header);
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
+      })
+    }
+        return this.httpService.PutService(`https://localhost:44306/api/Notes/Archive/${NoteID}`,{}, true, header);
   }
 
 
@@ -88,10 +88,22 @@ let header = {
       })
     }
 
-    return this.httpService.DelteService(`https://localhost:44306/api/Notes/Delete/${NoteID}`,true,header);
-
-    
+    return this.httpService.DelteService(`https://localhost:44306/api/Notes/Delete/${NoteID}`,true,header); 
 
   }
+
+
+  Changecolor(NoteID:any, color:any){
+    console.log(color, NoteID);
+    
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+    return this.httpService.PutService(`https://localhost:44306/api/Notes/Color/${NoteID}/${color}`,{}, true, header);
+  }
+
 
 }

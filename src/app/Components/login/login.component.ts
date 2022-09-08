@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
           Email: ['', [Validators.required, Validators.email]],
           Password: ['', [Validators.required, Validators.minLength(8)]],
       });
+      localStorage.removeItem('token');
   }
   // convenience getter for easy access to form fields
   get f() { return this.LoginForm.controls; }

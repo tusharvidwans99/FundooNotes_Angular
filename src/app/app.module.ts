@@ -28,6 +28,7 @@ import { TrashNotesComponent } from './Components/trash-notes/trash-notes.compon
 import { UpdateNoteComponent } from './Components/update-note/update-note.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { AuthguardServiceService } from './Services/authguardService/authguard-service.service';
 
 
 
@@ -64,7 +65,9 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
