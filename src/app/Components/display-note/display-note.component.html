@@ -3,18 +3,15 @@
         <mat-card class="note-card " mat-dialog-container [style.background]="note.color">
             <mat-card-title class="note-title" (click)="openDialog(note)">
                 <p>{{note.title}}</p>
-                <p>Trash:{{note.trash}}</p>
             </mat-card-title>
             <mat-card-content class="note-description" (click)="openDialog(note)">
                 <p>{{note.description}}</p>
-                <p>Archive:{{note.archive}}</p>
-                <p>Color: {{note.color}}</p>
             </mat-card-content>
 
           
             <mat-card-actions>
                 <div class="icons">
-                    <app-icons [noteObj]="note" (archiveEvent)="archiveMessage($event)" (TrashEvent)="trashMessage($event)" (UnarchiveEvent)="unarchiveMessage($event)" (DeleteEvent)="deleteMessage($event)"></app-icons>
+                    <app-icons [noteObj]="note" (archiveEvent)="archiveMessage($event)" (TrashEvent)="trashMessage($event)" (UnarchiveEvent)="unarchiveMessage($event)" (DeleteEvent)="deleteMessage($event)" (ColorEvent)="colorMessage($event)"></app-icons>
                 </div>
             </mat-card-actions>
         </mat-card>

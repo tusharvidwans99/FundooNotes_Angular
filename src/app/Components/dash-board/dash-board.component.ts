@@ -35,4 +35,12 @@ export class DashBoardComponent implements OnInit {
     this.route.navigateByUrl('DashBoard/Archive')
   }
 
+  logOut(){
+    console.log("stored: "+localStorage.getItem('token'));
+    
+    localStorage.removeItem('token');
+    console.log("Delted: "+ localStorage.getItem('token'));
+    this.route.navigateByUrl('/Login')
+  }
+
 }

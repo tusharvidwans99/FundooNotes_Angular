@@ -31,6 +31,12 @@ export class TrashNotesComponent implements OnInit {
     })
   }
 
+  deleteMessage(event:any){
+    this.getAllTrashNotes();
+  }
 
+  trashMessage(event:any){
+    this.getAllTrashNotes();
+  }
 
 }

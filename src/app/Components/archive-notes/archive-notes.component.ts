@@ -33,5 +33,18 @@ export class ArchiveNotesComponent implements OnInit {
     })
   }
 
+  unarchiveMessage(event:any){
+    this.getAllArchiveNotes();
+  }
+
+  
+  colorMessage(event:any){
+    this.getAllArchiveNotes();
+  }
+
+  trashMessage(event:any){
+    this.getAllArchiveNotes();
+  }
+
 
 }

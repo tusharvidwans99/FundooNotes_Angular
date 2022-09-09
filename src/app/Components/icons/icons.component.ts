@@ -21,6 +21,7 @@ export class IconsComponent implements OnInit {
   @Output() TrashEvent = new EventEmitter<string>();
   @Output() UnarchiveEvent = new EventEmitter<string>();
   @Output() DeleteEvent = new EventEmitter<string>();
+  @Output() ColorEvent = new EventEmitter<string>();
 
 
   isDisplaynoteComponent=false;
@@ -119,6 +120,7 @@ console.log(color);
 
   this.note.Changecolor(this.noteObj.noteID, color).subscribe((request:any)=>{
     console.log("Color changed successfully", request.data);
+    this.ColorEvent.emit(request);
   },(error:any)=>{
     console.log(error);
     

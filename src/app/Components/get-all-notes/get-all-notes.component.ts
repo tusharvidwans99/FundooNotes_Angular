@@ -46,15 +46,14 @@ export class GetAllNotesComponent implements OnInit {
   }
 
 
-  unarchiveMessage(event:any){
-    this.getallNotes();
-  }
-
 
   deleteMessage(event:any){
     this.getallNotes();
   }
 
+  colorMessage(event:any){
+    this.getallNotes();
+  }
 
 
 }

@@ -16,6 +16,7 @@ export class DisplayNoteComponent implements OnInit {
   @Output() TrashEvent = new EventEmitter<string>();
   @Output() UnarchiveEvent = new EventEmitter<string>();
   @Output() DeleteEvent = new EventEmitter<string>();
+  @Output() ColorEvent = new EventEmitter<string>();
 
   notedata:any;
 
@@ -53,6 +54,10 @@ export class DisplayNoteComponent implements OnInit {
 
   deleteMessage(event:any){
     this.DeleteEvent.emit("Reload page after delete");
+  }
+
+  colorMessage(event:any){
+    this.ColorEvent.emit("Reload page after colorchanges");
   }
 
 }

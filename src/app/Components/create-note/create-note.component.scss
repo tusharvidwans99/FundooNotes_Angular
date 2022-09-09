@@ -21,7 +21,7 @@
 }
 
 ::-webkit-input-placeholder {
-    text-decoration: none solid rgb(19, 20, 21);
+    // text-decoration: none solid rgb(19, 20, 21);
     font-weight: 550;
 }
 
@@ -34,11 +34,16 @@
 .create-note-footer{
     display: flex;
     flex-direction: row;
+    
+    justify-content: space-between;
     position: relative;
     padding-bottom: 5px;
 }
 
 .icons{
+    display: flex;
+    flex-direction: row;
+    position: relative;
     margin-left: 4px;
     width: 100%;
     column-gap: 70%;
@@ -50,6 +55,12 @@
 
 .icons button{
     margin-right: 10px;
+}
+
+.create-note-footer button {
+    border: none;
+    background-color: transparent;
+    
 }
 
 #btn1{
@@ -65,4 +76,9 @@ textarea{
 
 textarea::-webkit-scrollbar{
     width: 0px;
+}
+
+.create-note-header button {
+    border: none;
+    background-color: transparent;
 }
