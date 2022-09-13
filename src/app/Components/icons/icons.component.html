@@ -1,4 +1,4 @@
-<div class="create-note-footer" [style.background]="noteObj.color">
+<div class="create-note-footer" >
     <div class="create-note-btn" *ngIf="!isTrashComponent">
             <button mat-icon-button matTooltip="Reminde me">
                     <img class="icon" src="../../../assets/Dashboard/notification.png" />
@@ -6,18 +6,7 @@
             <button mat-icon-button matTooltip="Collaborator" class="header-icon">
                     <img src="../../../assets/Dashboard/add_person.png" />
             </button>
-            <!-- <button mat-icon-button matTooltip="Background color" class="bg-color" [matMenuTriggerFor]="color">
-                    <img src="../../../assets/Dashboard/color.png"/>
-                    <mat-menu #color="matMenu">
-                        <button mat-menu-item>Red</button>
-                        <button mat-menu-item>Yellow</button>
-                        <button mat-menu-item>Blue</button>
-                        <button mat-menu-item>Green</button>
-                        <button mat-menu-item>White</button>
-                        <button mat-menu-item>Gray</button>
-                      </mat-menu>
-            </button> -->
-
+           
             <button class="buttons" matTooltip="colour" [matMenuTriggerFor]="colorMenu">
                 <img class="icon" src="../../../assets/Dashboard/color.png" alt="">
                 <mat-menu #colorMenu="matMenu">
@@ -55,7 +44,6 @@
               </mat-menu>
             </button>
     </div>
-    <!-- <button mat-button matTooltip="Close" mat-dialog-close class="close-card">Close</button> -->
     <div *ngIf="isTrashComponent">
         <button mat-icon-button matTooltip="Delete Forever" (click)="delete()"> 
                 <img src="../../../assets/Dashboard/deleteforever.svg" width="20px" height="20px"></button>

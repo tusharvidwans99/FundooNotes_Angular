@@ -1,5 +1,5 @@
 <div class="display-note row">
-    <div *ngFor="let note of NoteList" class="column">
+    <div *ngFor="let note of NoteList | filter : Searchtitle" class="column">
         <mat-card class="note-card " mat-dialog-container [style.background]="note.color">
             <mat-card-title class="note-title" (click)="openDialog(note)">
                 <p>{{note.title}}</p>

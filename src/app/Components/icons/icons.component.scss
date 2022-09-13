@@ -6,7 +6,7 @@
     overflow: hidden; 
     white-space: nowrap;
     border: none;
-    background-color: white;
+    background-color: transparent;
 }
 
 .create-note-btn{
@@ -17,12 +17,17 @@
     border: none;
 }
 
+
+button:hover{
+  background-color: rgb(230, 229, 229);
+  border-radius: 18px;
+}
+
 button{
-    // margin-right: -5px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    
+  // margin-right: -5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .bg-color > button {

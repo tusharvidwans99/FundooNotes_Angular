@@ -12,10 +12,9 @@
                             placeholder="Take a note..." autocomplete="off" ></textarea>
             </div>
             <div class="create-note-footer" *ngIf="notecard">
-                    <div class="icons">
-                            <app-icons></app-icons>
-                    </div>
-                            <button mat-button matTooltip="Close" (click)="onSubmit()"  class="close-card">Close</button>
+                  <app-icons></app-icons>
+                        <!-- <app-icons></app-icons> -->
+                        <button mat-button matTooltip="Close" (click)="onSubmit()"  class="close-card">Close</button>
             </div>
                 
             

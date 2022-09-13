@@ -17,7 +17,7 @@
                         <img src="../../../assets/Dashboard/search.png" alt="search icon" width="25px">
                     </button>
                    
-                        <input class="inputtxt" autocomplete="off" placeholder="Search" type="text" id="name">
+                        <input class="inputtxt" autocomplete="off" placeholder="Search" type="text" id="name" (keyup)="searchNote($event)">
                     <span>
                     <button mat-icon-button class="example-icon">
                         <img class="cancle-bttn" src="../../../assets/Dashboard/close.png"alt="cancle icon" width="25px">

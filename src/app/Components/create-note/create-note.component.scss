@@ -13,8 +13,8 @@
     margin: 0px 0px 4px 13px;
     font-size: 17px;
     font-family: Roboto, Arial, sans-serif;
-    border:0;
-    outline: 0;
+    border:none;
+    outline: none;
     border-radius: 8px;
     width: 90%;
   } 
@@ -34,7 +34,7 @@
 .create-note-footer{
     display: flex;
     flex-direction: row;
-    
+    // border: 1px solid black;
     justify-content: space-between;
     position: relative;
     padding-bottom: 5px;
@@ -81,4 +81,17 @@ textarea::-webkit-scrollbar{
 .create-note-header button {
     border: none;
     background-color: transparent;
+}
+
+.create-note-footer >button {
+    position: relative;
+    top: 10px;
+    width: 50px;
+    height: 30px;
+}
+
+.create-note-footer >button:hover {
+    background-color: lightgray;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
+import { DataServiceService } from 'src/app/Services/dataservice/data-service.service';
 
 @Component({
   selector: 'app-dash-board',
@@ -12,10 +13,18 @@ export class DashBoardComponent implements OnInit {
   @Input() NoteList:any;
 
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private dataService:DataServiceService) { }
 
   ngOnInit(): void {
   }
+
+  searchNote(event:any)
+  {
+      console.log("event",event.target.value)
+      this.dataService.changeMessage(event.target.value)
+  }
+
+
 
   goTo(paramText:string){
     this.selectedMenu = paramText;

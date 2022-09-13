@@ -29,6 +29,9 @@ import { UpdateNoteComponent } from './Components/update-note/update-note.compon
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { AuthguardServiceService } from './Services/authguardService/authguard-service.service';
+import { Demo1Component } from './Components/demo1/demo1.component';
+import { Demo2Component } from './Components/demo2/demo2.component';
+import { FilterPipe } from './Pipe/filter.pipe';
 
 
 
@@ -45,6 +48,9 @@ import { AuthguardServiceService } from './Services/authguardService/authguard-s
     ArchiveNotesComponent,
     TrashNotesComponent,
     UpdateNoteComponent,
+    Demo1Component,
+    Demo2Component,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
